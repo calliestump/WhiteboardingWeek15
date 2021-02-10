@@ -1,0 +1,29 @@
+// Instructions
+Write a function that removes duplicates from an array
+Do not use filter() to solve this
+Once finished use filter()
+solve with and without recursion
+
+//Example
+Input: [7, 9, "hi", 12, "hi", 7, 53]
+Ouput: [7, 9, "hi", 12, 53]
+
+//Pseudocode
+function noDuplicates()
+pass in argument of an array
+newArr = ...new Set
+return newArr
+
+// Non-recursive
+function noDuplicates(arr) {
+	const newArr = [...new Set(arr)];
+  return newArr;
+}
+
+// Non-Recursive
+function noDuplicates(arr) {
+	const newArr = arr.filter((element, index) => {
+  	return arr.indexOf(element) == index;
+  });
+  return newArr; //[7, 9, "hi", 12, 53]
+}
